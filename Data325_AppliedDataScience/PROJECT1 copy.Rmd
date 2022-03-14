@@ -1,0 +1,58 @@
+---
+title: "PROJECT1"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(readr)
+
+library(tidyverse)
+library(maps)
+library(mosaic)
+
+# weird variable??
+# fam and famk??
+
+```
+
+```{r warning=FALSE, include=FALSE}
+Wooster1 <- read.csv("Admissions_data_main_1.csv")
+Wooster2 <- read.csv("Admissions_data_main_2.csv")
+Wooster3 <- read.csv("Admissions_data_main_3.csv")
+Wooster4 <- read_csv("Admissions_data_main_4.csv")
+```
+
+
+```{r}
+wooster = bind_rows(Wooster1, Wooster2, Wooster3, Wooster4)
+wooster
+```
+
+
+```{r}
+# metro variable is if the person is from metropolitan area or rural area.
+
+wooster %>% group_by(Metro) %>% count(Applicant)
+
+# We can draw a conclusion that people from metropolitan areas apply more i.e. 2261 people as compared to rural areas i.e.,  171.
+```
+
+```{r}
+gf_boxplot(  WooDist~ as.factor(Applicant), data = wooster) 
+```
+
+
+
+```{r}
+FinalMod <- lm(Applicant ~ WooDist + URM + HH.. + X.PrivHS + Metro + Inquiry, data = wooster)
+summary(FinalMod)
+
+```
+```{r}
+FinalMod <- glm(Applicant ~ WooDist + URM + HH.. + X.PrivHS + Metro + Inquiry , data = wooster, family ="binomial")
+summary(FinalMod)
+
+```
+
