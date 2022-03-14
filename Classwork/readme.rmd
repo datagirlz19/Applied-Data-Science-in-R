@@ -2,7 +2,7 @@ This is a collection of all the regression techniques from class. In addition to
 
 The goals of this folder is to keep a list of my work from that class as a refrence so as I expand my knowledge I can modify and add to this collection. 
 
-*Methods Used in R: *
+**Methods Used in R:**
 1. Exploratory Data Analysis
 2. Multiple Linear Regression 
 3. Logistic Regression Model 
