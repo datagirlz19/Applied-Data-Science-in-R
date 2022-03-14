@@ -1,0 +1,13 @@
+This is a collection of all the regression techniques from class. In addition to these mini-assignments, we also completed independed and group projects (lables **projects**). 
+
+The goals of this folder is to keep a list of my work from that class as a refrence so as I expand my knowledge I can modify and add to this collection. 
+
+*Methods Used in R: *
+1. Exploratory Data Analysis
+2. Multiple Linear Regression 
+3. Logistic Regression Model 
+4. K Nearest Neighbors 
+5. Factor Selection 
+6. Classification Trees 
+7. Regression Trees 
+8. Random Forest 
